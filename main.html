@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+ 
+     
+
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ab_data"><bold>INFORMATION ABOUT POINTS</bold></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="data_show"> Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h1>Radar system </h1>
+    
+      <div class="row">
+        <div class="col-md-6">
+          <canvas
+            id="myCanvas"
+            width="950"
+            height="300"
+            style="background-color: black">
+          </canvas>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div  class="form-group">Please enter coordinates you wants to locate</div>
+        <form id="getcoordinates">
+          <div class="form-group">
+            <input type="text" id="x_axis" placeholder="Please enter x axis" />
+            <input type="text" id="y_axis" placeholder="Please enter y axis" />
+            <input type="text" id="radius" placeholder="Please enter radius" />
+            <submit id="submitButton"><button class="btn btn-dark">Enter</button></submit>
+          </div> 
+        </form>
+    </div>
+
+    <div class="container">
+      <div  class="form-group">Please enter coordinates you wants to locate</div>
+        <form id="add_points">
+          <div class="form-group">
+            <input type="text" placeholder="enter x coordinates" id="x" />
+            <input type="text" placeholder="enter y coordinates" id="y" />
+            <submit id="points_sb" type="submit"><button class="btn btn-dark">Enter</button></submit>
+          </div>
+        </form>
+      </div>
+    <div>  
+      
+    <div class="container">  
+      <div class="form-group">Please Enter points you wants to find distance</div>
+        <form id="find_points">
+          <div class="form-group">
+            <input type="text" placeholder="enter x coordinates" id="aa" />
+            <input type="text" placeholder="enter y coordinates" id="bb" />
+            <submit id="distance" type="submit">   <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Enter to draw line
+    </button></submit>
+          </div>
+        </form>
+    </div>
+
+    <div class="container">
+      <div class="form-group">enter points we wants to delete</div>
+          <form id="delete">
+            <div class="form-group">
+              <input type="text" placeholder="enter x coordinates" id="delete_point"/>
+              <submit type="submit" id="delete_a"><button class="btn btn-dark">Delete</button></submit>
+            </div>
+          </form>
+    </div>
+    
+   
+    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
